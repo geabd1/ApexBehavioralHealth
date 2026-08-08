@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services — Apex Behavioral Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1F2A24;
+    --sage:#6B8F71;
+    --sage-deep:#4F6E56;
+    --sand:#EDE6D6;
+    --clay:#C1666B;
+    --cream:#FBF9F4;
+    --line: rgba(31,42,36,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Public Sans', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  /* header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,249,244,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 0;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.3rem;
+    color:var(--ink);
+  }
+  .logo-mark{
+    width:34px; height:34px; border-radius:50%;
+    background: conic-gradient(from 220deg, var(--sage), var(--clay), var(--sage));
+    flex-shrink:0;
+  }
+  .nav-links{display:flex; gap:36px; font-size:0.95rem; font-weight:500;}
+  .nav-links a{opacity:0.75; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--ink); color:var(--cream);
+    padding:11px 22px; border-radius:100px;
+    font-size:0.9rem; font-weight:600;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--sage-deep);}
+  .nav-toggle{display:none;}
+
+  /* hero */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:96px 0 88px;
+  }
+  .hero-blob{
+    position:absolute; z-index:0;
+    width:640px; height:640px;
+    right:-160px; top:-120px;
+    background: radial-gradient(circle at 40% 40%, rgba(107,143,113,0.30), rgba(107,143,113,0) 70%);
+    border-radius:50%;
+    animation: breathe 7s ease-in-out infinite;
+  }
+  @keyframes breathe{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.08); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-blob{ animation:none; }
+  }
+  .hero-inner{position:relative; z-index:1; max-width:640px;}
+  .eyebrow{
+    font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--sage-deep); margin-bottom:18px; display:block;
+  }
+  .hero h1{
+    font-size:3.4rem; margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--sage-deep);
+  }
+  .hero p{
+    font-size:1.15rem; opacity:0.8; max-width:520px; margin-bottom:34px;
+  }
+  .btn-primary{
+    display:inline-block;
+    background:var(--ink); color:var(--cream);
+    padding:15px 30px; border-radius:100px;
+    font-weight:600; font-size:0.98rem;
+    transition:transform .2s, background .2s;
+  }
+  .btn-primary:hover{background:var(--sage-deep); transform:translateY(-1px);}
+
+  /* photo hero (interior pages) */
+  .photo-hero{
+    position:relative;
+    padding:120px 0 96px;
+    text-align:center;
+    color:var(--cream);
+    overflow:hidden;
+  }
+  .photo-hero img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
+  }
+  .photo-hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(31,42,36,0.55), rgba(31,42,36,0.72));
+    z-index:1;
+  }
+  .photo-hero-inner{position:relative; z-index:2;}
+  .photo-hero .eyebrow{color:var(--sand); opacity:0.85;}
+  .photo-hero h1{font-size:3.2rem; color:var(--cream); margin-bottom:14px;}
+  .photo-hero p{font-size:1.2rem; opacity:0.9; font-family:'Fraunces', serif; font-style:italic;}
+
+  /* service rows */
+  .services-list{padding:88px 0 40px;}
+  .service-row{
+    display:flex; align-items:stretch;
+    border-radius:18px; overflow:hidden;
+    margin-bottom:28px;
+    min-height:210px;
+    border:1px solid var(--line);
+  }
+  .service-row:nth-child(even){flex-direction:row-reverse;}
+  .service-photo{
+    flex:0 0 34%;
+    background-size:cover; background-position:center;
+  }
+  .service-copy{
+    flex:1;
+    background:var(--sand);
+    display:flex; flex-direction:column; justify-content:center;
+    padding:36px 44px;
+  }
+  .service-copy h3{font-size:1.7rem; font-weight:500; margin-bottom:10px;}
+  .service-copy p{opacity:0.75; font-size:0.98rem; max-width:520px;}
+
+  @media (max-width: 720px){
+    .service-row, .service-row:nth-child(even){flex-direction:column;}
+    .service-photo{flex-basis:180px;}
+    .service-copy{padding:26px 26px;}
+    .photo-hero h1{font-size:2.2rem;}
+  }
+
+  /* welcome / intro */
+  .intro{
+    padding:80px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--sand);
+  }
+  .intro-grid{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:center;
+  }
+  .intro h2{font-size:2.1rem; margin-bottom:20px;}
+  .intro p{opacity:0.82; max-width:480px;}
+  .testimonial{
+    background:var(--cream);
+    border-radius:18px;
+    padding:32px;
+    border:1px solid var(--line);
+  }
+  .testimonial-quote{
+    font-family:'Fraunces', serif; font-style:italic; font-size:1.15rem;
+    margin-bottom:18px; color:var(--ink);
+  }
+  .testimonial-name{
+    font-size:0.85rem; font-weight:600; opacity:0.65; letter-spacing:0.03em;
+  }
+
+  /* why choose */
+  .why{padding:96px 0;}
+  .section-head{max-width:560px; margin-bottom:56px;}
+  .section-head .eyebrow{color:var(--clay);}
+  .section-head h2{font-size:2.2rem;}
+  .card-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;
+  }
+  .card{
+    background:var(--sand);
+    border-radius:16px; padding:32px 28px;
+    border:1px solid var(--line);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(31,42,36,0.08);
+  }
+  .card-icon{
+    width:44px; height:44px; border-radius:12px;
+    background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-size:1.1rem; margin-bottom:20px;
+  }
+  .card h3{font-size:1.15rem; margin-bottom:10px; font-weight:600;}
+  .card p{font-size:0.94rem; opacity:0.75;}
+
+  /* contact band */
+  .contact-band{
+    background:var(--ink); color:var(--cream);
+    padding:80px 0; text-align:center;
+  }
+  .contact-band h2{color:var(--cream); font-size:2rem; max-width:600px; margin:0 auto 18px;}
+  .contact-band p{opacity:0.75; max-width:520px; margin:0 auto 32px;}
+  .contact-band .btn-primary{background:var(--clay);}
+  .contact-band .btn-primary:hover{background:#a8555a;}
+
+  /* footer */
+  footer{
+    background:#16201A; color:var(--sand);
+    padding:72px 0 28px;
+  }
+  .footer-grid{
+    display:grid; grid-template-columns:1.3fr 1fr 1fr 1.2fr; gap:48px;
+    padding-bottom:48px; border-bottom:1px solid rgba(237,230,214,0.14);
+  }
+  .footer-brand .logo{color:var(--sand); margin-bottom:14px;}
+  .footer-brand p{
+    font-size:0.9rem; opacity:0.6; max-width:260px; line-height:1.6;
+  }
+  .footer-heading{
+    font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    opacity:0.55; margin-bottom:18px;
+  }
+  .footer-col a, .footer-col p{
+    display:block; font-size:0.92rem; opacity:0.75; margin-bottom:12px;
+  }
+  .footer-col a:hover{opacity:1; color:var(--sage);}
+  .footer-bottom{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:26px; font-size:0.82rem; opacity:0.5; flex-wrap:wrap; gap:12px;
+  }
+  .footer-bottom-links{display:flex; gap:24px;}
+  .footer-bottom-links a:hover{opacity:1; text-decoration:underline;}
+
+  @media (max-width: 860px){
+    .nav-links, .nav-cta{display:none;}
+    .intro-grid{grid-template-columns:1fr; gap:36px;}
+    .card-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:2.4rem;}
+    .hero-blob{width:420px; height:420px; right:-140px;}
+    .footer-grid{grid-template-columns:1fr 1fr; gap:36px;}
+  }
+  @media (max-width: 520px){
+    .footer-grid{grid-template-columns:1fr;}
+    .footer-bottom{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Apex Behavioral Health
+    </div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html" style="opacity:1; font-weight:700;">Services</a>
+      <a href="#journey">Your Journey</a>
+      <a href="about.html">About Us</a>
+      <a href="appointment.html">Contact Us</a>
+    </nav>
+    <a class="nav-cta" href="appointment.html">Book an Appointment</a>
+  </div>
+</header>
+
+<section class="photo-hero">
+  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true">
+  <div class="wrap photo-hero-inner">
+    <span class="eyebrow">Apex Behavioral Health</span>
+    <h1>Our Services</h1>
+    <p>You don't have to go through it alone</p>
+  </div>
+</section>
+
+<section class="services-list" id="services">
+  <div class="wrap">
+
+    <div class="service-row">
+      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="service-copy">
+        <h3>Psychiatric Evaluation</h3>
+        <p>A thorough, judgment-free assessment of what you're experiencing, so we can build a treatment plan around your specific needs — not a generic checklist.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="service-copy">
+        <h3>Medication Management</h3>
+        <p>Ongoing, closely monitored prescribing that adjusts with you over time, with clear explanations at every step so you always know what you're taking and why.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1541199249251-f713e6145474?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="service-copy">
+        <h3>Treatment for Anxiety &amp; Depression</h3>
+        <p>Evidence-based therapy and care designed to help you understand what you're feeling and build real, lasting tools to manage it.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="service-copy">
+        <h3>ADHD Evaluation &amp; Management</h3>
+        <p>Comprehensive evaluation and ongoing support for focus, attention, and follow-through — for both newly diagnosed and long-time patients.</p>
+      </div>
+    </div>
+
+    <div class="service-row">
+      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80')"></div>
+      <div class="service-copy">
+        <h3>Mood Disorders</h3>
+        <p>Compassionate, long-term care for bipolar disorder and other mood conditions, centered on stability and quality of life.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-band" id="contact" style="padding-top:24px; text-align:left;">
+  <div class="wrap">
+    <h2 style="font-size:1.6rem;">Get in touch</h2>
+    <p style="margin:0 0 0;">We aim to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment. Contact us now.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="include-footer.js"></script>
+
+</body>
+</html>
