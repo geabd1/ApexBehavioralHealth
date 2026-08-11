@@ -140,6 +140,11 @@
     margin-bottom:28px;
     min-height:210px;
     border:1px solid var(--line);
+    transition:box-shadow .2s, transform .2s;
+  }
+  .service-row:hover{
+    box-shadow:0 12px 30px rgba(31,42,36,0.08);
+    transform:translateY(-2px);
   }
   .service-row:nth-child(even){flex-direction:row-reverse;}
   .service-photo{
@@ -299,7 +304,7 @@
     <div class="service-row">
       <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&q=80')"></div>
       <div class="service-copy">
-        <h3>Psychiatric Evaluation</h3>
+        <h3><a href="psychiatric-evaluation.html" style="color:inherit;">Psychiatric Evaluation</a></h3>
         <p>A thorough, judgment-free assessment of what you're experiencing, so we can build a treatment plan around your specific needs — not a generic checklist.</p>
       </div>
     </div>
@@ -307,7 +312,7 @@
     <div class="service-row">
       <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80')"></div>
       <div class="service-copy">
-        <h3>Medication Management</h3>
+        <h3><a href="medication-management.html" style="color:inherit;">Medication Management</a></h3>
         <p>Ongoing, closely monitored prescribing that adjusts with you over time, with clear explanations at every step so you always know what you're taking and why.</p>
       </div>
     </div>
@@ -315,7 +320,7 @@
     <div class="service-row">
       <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1541199249251-f713e6145474?auto=format&fit=crop&w=800&q=80')"></div>
       <div class="service-copy">
-        <h3>Treatment for Anxiety &amp; Depression</h3>
+        <h3><a href="anxiety-depression.html" style="color:inherit;">Treatment for Anxiety &amp; Depression</a></h3>
         <p>Evidence-based therapy and care designed to help you understand what you're feeling and build real, lasting tools to manage it.</p>
       </div>
     </div>
@@ -323,7 +328,7 @@
     <div class="service-row">
       <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=800&q=80')"></div>
       <div class="service-copy">
-        <h3>ADHD Evaluation &amp; Management</h3>
+        <h3><a href="adhd.html" style="color:inherit;">ADHD Evaluation &amp; Management</a></h3>
         <p>Comprehensive evaluation and ongoing support for focus, attention, and follow-through — for both newly diagnosed and long-time patients.</p>
       </div>
     </div>
@@ -331,7 +336,7 @@
     <div class="service-row">
       <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80')"></div>
       <div class="service-copy">
-        <h3>Mood Disorders</h3>
+        <h3><a href="mood-disorders.html" style="color:inherit;">Mood Disorders</a></h3>
         <p>Compassionate, long-term care for bipolar disorder and other mood conditions, centered on stability and quality of life.</p>
       </div>
     </div>
@@ -346,8 +351,48 @@
   </div>
 </section>
 
-<div id="site-footer"></div>
-<script src="include-footer.js"></script>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Apex Behavioral Health
+        </div>
+        <p>A space to be heard, respected, and supported — on your terms, at your pace.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#journey">Your Journey</a>
+        <a href="about.html">About Us</a>
+        <a href="appointment.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Contact</div>
+        <a href="tel:4433148717">Phone: 443-314-8717</a>
+        <a href="mailto:info@apexbehavioralhealth.com">info@apexbehavioralhealth.com</a>
+        <a href="https://apexbehavioralhealth.com" target="_blank" rel="noopener">apexbehavioralhealth.com</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Locate Us</div>
+        <p>1001 Pine Heights Ave, Suite #302<br>Baltimore, MD 21229</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Apex Behavioral Health. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell My Personal Information</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

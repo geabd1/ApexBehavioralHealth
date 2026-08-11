@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Services — Apex Behavioral Health</title>
+<title>Apex Behavioral Health — You don't have to carry this alone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -109,58 +109,6 @@
     transition:transform .2s, background .2s;
   }
   .btn-primary:hover{background:var(--sage-deep); transform:translateY(-1px);}
-
-  /* photo hero (interior pages) */
-  .photo-hero{
-    position:relative;
-    padding:120px 0 96px;
-    text-align:center;
-    color:var(--cream);
-    overflow:hidden;
-  }
-  .photo-hero img{
-    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;
-  }
-  .photo-hero::after{
-    content:"";
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(31,42,36,0.55), rgba(31,42,36,0.72));
-    z-index:1;
-  }
-  .photo-hero-inner{position:relative; z-index:2;}
-  .photo-hero .eyebrow{color:var(--sand); opacity:0.85;}
-  .photo-hero h1{font-size:3.2rem; color:var(--cream); margin-bottom:14px;}
-  .photo-hero p{font-size:1.2rem; opacity:0.9; font-family:'Fraunces', serif; font-style:italic;}
-
-  /* service rows */
-  .services-list{padding:88px 0 40px;}
-  .service-row{
-    display:flex; align-items:stretch;
-    border-radius:18px; overflow:hidden;
-    margin-bottom:28px;
-    min-height:210px;
-    border:1px solid var(--line);
-  }
-  .service-row:nth-child(even){flex-direction:row-reverse;}
-  .service-photo{
-    flex:0 0 34%;
-    background-size:cover; background-position:center;
-  }
-  .service-copy{
-    flex:1;
-    background:var(--sand);
-    display:flex; flex-direction:column; justify-content:center;
-    padding:36px 44px;
-  }
-  .service-copy h3{font-size:1.7rem; font-weight:500; margin-bottom:10px;}
-  .service-copy p{opacity:0.75; font-size:0.98rem; max-width:520px;}
-
-  @media (max-width: 720px){
-    .service-row, .service-row:nth-child(even){flex-direction:column;}
-    .service-photo{flex-basis:180px;}
-    .service-copy{padding:26px 26px;}
-    .photo-hero h1{font-size:2.2rem;}
-  }
 
   /* welcome / intro */
   .intro{
@@ -274,8 +222,8 @@
       Apex Behavioral Health
     </div>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="services.html" style="opacity:1; font-weight:700;">Services</a>
+      <a href="index.html" style="opacity:1; font-weight:700;">Home</a>
+      <a href="services.html">Services</a>
       <a href="#journey">Your Journey</a>
       <a href="about.html">About Us</a>
       <a href="appointment.html">Contact Us</a>
@@ -284,70 +232,120 @@
   </div>
 </header>
 
-<section class="photo-hero">
-  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true">
-  <div class="wrap photo-hero-inner">
+<section class="hero">
+  <div class="hero-blob" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
     <span class="eyebrow">Apex Behavioral Health</span>
-    <h1>Our Services</h1>
-    <p>You don't have to go through it alone</p>
+    <h1>You don't have to carry this <em>alone</em>.</h1>
+    <p>Reaching out takes courage. Apex offers a space to be heard, respected, and never judged — with a care team that meets you exactly where you are.</p>
+    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
   </div>
 </section>
 
-<section class="services-list" id="services">
+<section class="intro" id="about">
+  <div class="wrap intro-grid">
+    <div>
+      <h2>Welcome to Apex</h2>
+      <p>Seeking help takes courage. At Apex, we honor that courage by providing a space where you are heard, respected, and never judged. Here's why patients choose us as their partners in mental wellness.</p>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"I didn't realize how much my path was affecting my daily life until I started working with people at Apex. The support I found here brought so much more than I thought I'd ever get."</p>
+      <p class="testimonial-name">— Jessica T., Catonsville</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="services">
   <div class="wrap">
-
-    <div class="service-row">
-      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&q=80')"></div>
-      <div class="service-copy">
-        <h3>Psychiatric Evaluation</h3>
-        <p>A thorough, judgment-free assessment of what you're experiencing, so we can build a treatment plan around your specific needs — not a generic checklist.</p>
+    <div class="section-head">
+      <span class="eyebrow">Why choose Apex</span>
+      <h2>Care built around the person, not the diagnosis</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">C</div>
+        <h3>Compassionate, patient-centered care</h3>
+        <p>You are never a number here. Every plan starts with your voice, your pace, and your goals.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">E</div>
+        <h3>Evidence-based treatment that works</h3>
+        <p>Our clinicians draw on proven, research-backed approaches tailored to what actually helps you.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">T</div>
+        <h3>An experienced, dedicated team</h3>
+        <p>Our providers bring deep training and a shared belief that healing is possible for everyone.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">P</div>
+        <h3>Confidentiality, safety, and flexibility</h3>
+        <p>HIPAA-compliant care, in-person or virtual, that fits around your life — not the other way around.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">L</div>
+        <h3>Empowering a healthier, fuller life</h3>
+        <p>Our aim isn't just symptom relief — it's helping you build lasting, practical tools for the road ahead.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">J</div>
+        <h3>Support for the whole journey</h3>
+        <p>From your first appointment onward, we walk alongside you — not just through the hard moments.</p>
       </div>
     </div>
-
-    <div class="service-row">
-      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80')"></div>
-      <div class="service-copy">
-        <h3>Medication Management</h3>
-        <p>Ongoing, closely monitored prescribing that adjusts with you over time, with clear explanations at every step so you always know what you're taking and why.</p>
-      </div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1541199249251-f713e6145474?auto=format&fit=crop&w=800&q=80')"></div>
-      <div class="service-copy">
-        <h3>Treatment for Anxiety &amp; Depression</h3>
-        <p>Evidence-based therapy and care designed to help you understand what you're feeling and build real, lasting tools to manage it.</p>
-      </div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?auto=format&fit=crop&w=800&q=80')"></div>
-      <div class="service-copy">
-        <h3>ADHD Evaluation &amp; Management</h3>
-        <p>Comprehensive evaluation and ongoing support for focus, attention, and follow-through — for both newly diagnosed and long-time patients.</p>
-      </div>
-    </div>
-
-    <div class="service-row">
-      <div class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80')"></div>
-      <div class="service-copy">
-        <h3>Mood Disorders</h3>
-        <p>Compassionate, long-term care for bipolar disorder and other mood conditions, centered on stability and quality of life.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section class="contact-band" id="contact" style="padding-top:24px; text-align:left;">
+<section class="contact-band" id="contact">
   <div class="wrap">
-    <h2 style="font-size:1.6rem;">Get in touch</h2>
-    <p style="margin:0 0 0;">We aim to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment. Contact us now.</p>
+    <h2>Get in touch</h2>
+    <p>We're here to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment. Contact us today.</p>
+    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
   </div>
 </section>
 
-<div id="site-footer"></div>
-<script src="include-footer.js"></script>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Apex Behavioral Health
+        </div>
+        <p>A space to be heard, respected, and supported — on your terms, at your pace.</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#journey">Your Journey</a>
+        <a href="about.html">About Us</a>
+        <a href="appointment.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Contact</div>
+        <a href="tel:4433148717">Phone: 443-314-8717</a>
+        <a href="mailto:info@apexbehavioralhealth.com">info@apexbehavioralhealth.com</a>
+        <a href="https://apexbehavioralhealth.com" target="_blank" rel="noopener">apexbehavioralhealth.com</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading">Locate Us</div>
+        <p>1001 Pine Heights Ave, Suite #302<br>Baltimore, MD 21229</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Apex Behavioral Health. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell My Personal Information</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
