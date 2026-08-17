@@ -152,12 +152,6 @@
     transform:translateY(-4px);
     box-shadow:0 12px 30px rgba(31,42,36,0.08);
   }
-  .card-icon{
-    width:44px; height:44px; border-radius:12px;
-    background:var(--ink); color:var(--cream);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Fraunces', serif; font-size:1.1rem; margin-bottom:20px;
-  }
   .card h3{font-size:1.15rem; margin-bottom:10px; font-weight:600;}
   .card p{font-size:0.94rem; opacity:0.75;}
 
@@ -218,17 +212,16 @@
 <header>
   <div class="wrap nav">
     <div class="logo">
-      <span class="logo-mark" aria-hidden="true"></span>
+      <img src="apex-mark.png" alt="" aria-hidden="true" style="height:56px; width:56px; border-radius:50%; object-fit:cover;">
       Apex Behavioral Health
     </div>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html" style="opacity:1; font-weight:700;">Home</a>
       <a href="services.html">Services</a>
-      <a href="#journey">Your Journey</a>
+      <a href="your-journey.html">Your Journey</a>
       <a href="about.html">About Us</a>
-      <a href="appointment.html">Contact Us</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
-    <a class="nav-cta" href="appointment.html">Book an Appointment</a>
   </div>
 </header>
 
@@ -238,20 +231,14 @@
     <span class="eyebrow">Apex Behavioral Health</span>
     <h1>You don't have to carry this <em>alone</em>.</h1>
     <p>Reaching out takes courage. Apex offers a space to be heard, respected, and never judged — with a care team that meets you exactly where you are.</p>
-    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
+    <a class="btn-primary" href="contact.html">Contact Us</a>
   </div>
 </section>
 
 <section class="intro" id="about">
-  <div class="wrap intro-grid">
-    <div>
-      <h2>Welcome to Apex</h2>
-      <p>Seeking help takes courage. At Apex, we honor that courage by providing a space where you are heard, respected, and never judged. Here's why patients choose us as their partners in mental wellness.</p>
-    </div>
-    <div class="testimonial">
-      <p class="testimonial-quote">"I didn't realize how much my path was affecting my daily life until I started working with people at Apex. The support I found here brought so much more than I thought I'd ever get."</p>
-      <p class="testimonial-name">— Jessica T., Catonsville</p>
-    </div>
+  <div class="wrap" style="max-width:680px;">
+    <h2>Welcome to Apex</h2>
+    <p>Seeking help takes courage. At Apex, we honor that courage by providing a space where you are heard, respected, and never judged. Here's why patients choose us as their partners in mental wellness.</p>
   </div>
 </section>
 
@@ -263,34 +250,24 @@
     </div>
     <div class="card-grid">
       <div class="card">
-        <div class="card-icon">C</div>
         <h3>Compassionate, patient-centered care</h3>
         <p>You are never a number here. Every plan starts with your voice, your pace, and your goals.</p>
       </div>
       <div class="card">
-        <div class="card-icon">E</div>
         <h3>Evidence-based treatment that works</h3>
         <p>Our clinicians draw on proven, research-backed approaches tailored to what actually helps you.</p>
       </div>
       <div class="card">
-        <div class="card-icon">T</div>
         <h3>An experienced, dedicated team</h3>
         <p>Our providers bring deep training and a shared belief that healing is possible for everyone.</p>
       </div>
       <div class="card">
-        <div class="card-icon">P</div>
         <h3>Confidentiality, safety, and flexibility</h3>
         <p>HIPAA-compliant care, in-person or virtual, that fits around your life — not the other way around.</p>
       </div>
       <div class="card">
-        <div class="card-icon">L</div>
         <h3>Empowering a healthier, fuller life</h3>
         <p>Our aim isn't just symptom relief — it's helping you build lasting, practical tools for the road ahead.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">J</div>
-        <h3>Support for the whole journey</h3>
-        <p>From your first appointment onward, we walk alongside you — not just through the hard moments.</p>
       </div>
     </div>
   </div>
@@ -298,9 +275,9 @@
 
 <section class="contact-band" id="contact">
   <div class="wrap">
-    <h2>Get in touch</h2>
-    <p>We're here to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment. Contact us today.</p>
-    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
+    <h2>We're here when you're ready</h2>
+    <p>We aim to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment.</p>
+    <a class="btn-primary" href="contact.html">Contact Us</a>
   </div>
 </section>
 
@@ -308,10 +285,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-mark" aria-hidden="true"></span>
-          Apex Behavioral Health
-        </div>
+        <img src="apex-logo.png" alt="Apex Behavioral Health logo" style="width:200px; height:auto; margin-bottom:14px;">
         <p>A space to be heard, respected, and supported — on your terms, at your pace.</p>
       </div>
 
@@ -319,16 +293,16 @@
         <div class="footer-heading">Explore</div>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="#journey">Your Journey</a>
+        <a href="your-journey.html">Your Journey</a>
         <a href="about.html">About Us</a>
-        <a href="appointment.html">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
       <div class="footer-col">
         <div class="footer-heading">Contact</div>
         <a href="tel:4433148717">Phone: 443-314-8717</a>
-        <a href="mailto:info@apexbehavioralhealth.com">info@apexbehavioralhealth.com</a>
-        <a href="https://apexbehavioralhealth.com" target="_blank" rel="noopener">apexbehavioralhealth.com</a>
+        <a href="mailto:info@apexbehealth.com">info@apexbehealth.com</a>
+        <a href="https://apexbehealth.com" target="_blank" rel="noopener">apexbehealth.com</a>
       </div>
 
       <div class="footer-col">
