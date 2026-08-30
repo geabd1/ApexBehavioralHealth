@@ -70,15 +70,28 @@
   /* hero */
   .hero{
     position:relative; overflow:hidden;
-    padding:96px 0 88px;
+    padding:150px 0 130px;
+    color:var(--cream);
+  }
+  .hero-photo{
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 30%;
+    z-index:0;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(115deg, rgba(22,32,26,0.82) 0%, rgba(22,32,26,0.62) 45%, rgba(22,32,26,0.35) 100%);
+    z-index:1;
   }
   .hero-blob{
-    position:absolute; z-index:0;
+    position:absolute; z-index:1;
     width:640px; height:640px;
     right:-160px; top:-120px;
     background: radial-gradient(circle at 40% 40%, rgba(107,143,113,0.30), rgba(107,143,113,0) 70%);
     border-radius:50%;
     animation: breathe 7s ease-in-out infinite;
+    mix-blend-mode:screen;
   }
   @keyframes breathe{
     0%,100%{ transform:scale(1); }
@@ -87,19 +100,22 @@
   @media (prefers-reduced-motion: reduce){
     .hero-blob{ animation:none; }
   }
-  .hero-inner{position:relative; z-index:1; max-width:640px;}
-  .eyebrow{
+  .hero-inner{position:relative; z-index:2; max-width:640px;}
+  .hero .eyebrow{
     font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--sage-deep); margin-bottom:18px; display:block;
+    color:var(--sand); opacity:0.9; margin-bottom:18px; display:block;
   }
   .hero h1{
     font-size:3.4rem; margin-bottom:22px;
+    color:var(--cream);
+    text-shadow:0 2px 18px rgba(0,0,0,0.25);
   }
   .hero h1 em{
-    font-style:italic; color:var(--sage-deep);
+    font-style:italic; color:#CFE0D2;
   }
   .hero p{
-    font-size:1.15rem; opacity:0.8; max-width:520px; margin-bottom:34px;
+    font-size:1.15rem; opacity:0.92; max-width:520px; margin-bottom:34px;
+    color:var(--sand);
   }
   .btn-primary{
     display:inline-block;
@@ -222,16 +238,18 @@
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </nav>
+    <a class="nav-cta" href="appointment.html">Book an Appointment</a>
   </div>
 </header>
 
 <section class="hero">
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true">
   <div class="hero-blob" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Apex Behavioral Health</span>
     <h1>You don't have to carry this <em>alone</em>.</h1>
     <p>Reaching out takes courage. Apex offers a space to be heard, respected, and never judged — with a care team that meets you exactly where you are.</p>
-    <a class="btn-primary" href="contact.html">Contact Us</a>
+    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
   </div>
 </section>
 
@@ -277,7 +295,7 @@
   <div class="wrap">
     <h2>We're here when you're ready</h2>
     <p>We aim to help you get easy access to the best quality of care in a supportive, inclusive, and non-judgmental environment.</p>
-    <a class="btn-primary" href="contact.html">Contact Us</a>
+    <a class="btn-primary" href="appointment.html">Book an Appointment</a>
   </div>
 </section>
 

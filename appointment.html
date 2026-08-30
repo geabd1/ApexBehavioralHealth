@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Treatment for Anxiety & Depression — Apex Behavioral Health</title>
+<title>Book an Appointment — Apex Behavioral Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -155,41 +155,30 @@
   .service-copy h3{font-size:1.7rem; font-weight:500; margin-bottom:10px;}
   .service-copy p{opacity:0.75; font-size:0.98rem; max-width:520px;}
 
+  /* about page */
+  .story{padding:88px 0 40px;}
+  .story h2{font-size:2rem; margin-bottom:22px;}
+  .story .lede{
+    font-family:'Fraunces', serif; font-style:italic; font-size:1.25rem;
+    color:var(--sage-deep); margin-bottom:22px; max-width:680px;
+  }
+  .story p{opacity:0.82; max-width:680px; margin-bottom:18px; font-size:1.02rem;}
+  .story-divider{
+    height:1px; background:var(--line); margin:64px 0 48px;
+  }
+  .apart-grid{display:grid; gap:26px; max-width:720px;}
+  .apart-item{
+    padding-left:22px; border-left:3px solid var(--sage);
+  }
+  .apart-item h3{font-size:1.15rem; font-weight:600; margin-bottom:8px;}
+  .apart-item p{opacity:0.78; font-size:0.98rem; margin:0;}
+
   @media (max-width: 720px){
     .service-row, .service-row:nth-child(even){flex-direction:column;}
     .service-photo{flex-basis:180px;}
     .service-copy{padding:26px 26px;}
     .photo-hero h1{font-size:2.2rem;}
   }
-
-  /* service detail pages */
-  .back-link{
-    display:inline-flex; align-items:center; gap:10px;
-    padding:40px 0 8px;
-    font-weight:600; font-size:0.98rem;
-  }
-  .back-link:hover{color:var(--sage-deep);}
-  .service-banner{
-    background:#AFCBEA;
-    border-radius:16px;
-    padding:36px 32px;
-    text-align:center;
-    margin:24px 0 48px;
-  }
-  .service-banner h1{font-size:2.4rem; color:var(--ink);}
-  .detail-body{max-width:760px; margin:0 auto; padding-bottom:24px;}
-  .detail-body h2{font-size:1.5rem; margin:38px 0 14px;}
-  .detail-body > p{opacity:0.82; margin-bottom:14px;}
-  .step-list, .treat-list{margin:0 0 8px; padding-left:22px;}
-  .step-list li, .treat-list li{opacity:0.82; margin-bottom:8px;}
-  .faq-item{margin-bottom:18px;}
-  .faq-item p{margin:0; opacity:0.82;}
-  .faq-item .q{font-weight:600; opacity:1; margin-bottom:4px;}
-  .detail-cta{
-    text-align:center; background:var(--sand);
-    border-radius:16px; padding:40px 32px; margin-top:48px;
-  }
-  .detail-cta h3{font-size:1.3rem; margin-bottom:18px;}
 
   /* welcome / intro */
   .intro{
@@ -304,7 +293,7 @@
     </div>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="services.html" style="opacity:1; font-weight:700;">Services</a>
+      <a href="services.html">Services</a>
       <a href="your-journey.html">Your Journey</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
@@ -314,51 +303,55 @@
 </header>
 
 <section class="photo-hero">
-  <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true">
+  <img src="https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" aria-hidden="true">
   <div class="wrap photo-hero-inner">
     <span class="eyebrow">Apex Behavioral Health</span>
-    <h1>Our Services</h1>
-    <p>You don't have to go through it alone</p>
+    <h1>Schedule an Appointment</h1>
+    <p>Pick a time that works for you — no phone tag required</p>
   </div>
 </section>
 
-<div class="wrap">
-  <a class="back-link" href="services.html">&larr; Back to Services</a>
-
-  <div class="service-banner">
-    <h1>Treatment for Anxiety &amp; Depression</h1>
-  </div>
-
-  <div class="detail-body">
-    <h2>What Is anxiety and depression treatment?</h2>
-    <p>Anxiety and depression can affect your sleep, focus, relationships, and sense of self. Our treatment combines evidence-based therapy with medication support where appropriate, so you leave with real, practical tools — not just a diagnosis.</p>
-
-    <h2>How It Works</h2>
-    <ul class="step-list">
-      <li><strong>Evaluation</strong> — we assess your symptoms, triggers, and how they're affecting daily life.</li>
-      <li><strong>Personalized plan</strong> — therapy, medication, or a combination, based on what fits you.</li>
-      <li><strong>Regular sessions</strong> — consistent care to build coping tools and track progress over time.</li>
-      <li><strong>Ongoing adjustment</strong> — we revisit the plan as you improve or as life circumstances change.</li>
-    </ul>
-
-    <h2>Conditions We Treat</h2>
-    <ul class="treat-list">
-      <li>Generalized anxiety, panic disorder, social anxiety, phobias</li>
-      <li>Major depressive disorder and persistent depressive disorder</li>
-      <li>Seasonal affective disorder</li>
-      <li>Stress and life-transition related distress</li>
-    </ul>
-
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item"><p class="q">Q: How soon will I feel better?</p><p>A: Many patients notice some relief within a few weeks of starting treatment; full benefit often takes longer, especially with medication.</p></div>
-    <div class="faq-item"><p class="q">Q: Is therapy or medication better?</p><p>A: It depends on you — we'll talk through what fits your situation, and many patients benefit from both together.</p></div>
-
-    <div class="detail-cta">
-      <h3>Ready to take the first step?</h3>
-      <a class="btn-primary" href="appointment.html">Book an Appointment</a>
+<section class="booking" id="booking">
+  <div class="wrap booking-wrap">
+    <div class="booking-note">
+      <h2>Schedule your visit</h2>
+      <p>Choose an available time below and you'll get an instant confirmation by email. If you don't see a time that works, call us at <a href="tel:4433148717">443-314-8717</a> and we'll find something that fits.</p>
     </div>
+
+    <!-- Calendly inline widget -->
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/apexbehealth/30min"
+         style="min-width:320px; height:700px;">
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
   </div>
-</div>
+</section>
+
+<section class="confirmation" id="confirmation" hidden>
+  <div class="wrap confirmation-wrap">
+    <h2>Appointment Submitted!</h2>
+    <p>We will contact you to confirm the date and time.</p>
+    <a class="btn-primary" href="index.html">Back to Home</a>
+  </div>
+</section>
+
+<script>
+  // Calendly posts a message to the parent window once a booking is
+  // actually confirmed. We listen for that, then swap the widget out
+  // for the confirmation screen so this only shows on a real booking.
+  window.addEventListener("message", function (e) {
+    if (
+      e.origin === "https://calendly.com" &&
+      e.data &&
+      e.data.event === "calendly.event_scheduled"
+    ) {
+      document.getElementById("booking").hidden = true;
+      document.getElementById("confirmation").hidden = false;
+      document.getElementById("confirmation").scrollIntoView({ behavior: "smooth" });
+    }
+  });
+</script>
 
 <footer>
   <div class="wrap">
