@@ -173,6 +173,20 @@
   .apart-item h3{font-size:1.15rem; font-weight:600; margin-bottom:8px;}
   .apart-item p{opacity:0.78; font-size:0.98rem; margin:0;}
 
+  /* insurance */
+  .insurance-section{padding:0 0 88px;}
+  .insurance-section p{opacity:0.82; max-width:620px; margin-bottom:26px;}
+  .insurance-list{
+    display:flex; flex-wrap:wrap; gap:12px; max-width:720px;
+  }
+  .insurance-pill{
+    background:var(--sand);
+    border:1px solid var(--line);
+    border-radius:100px;
+    padding:10px 20px;
+    font-size:0.95rem; font-weight:600;
+  }
+
   @media (max-width: 720px){
     .service-row, .service-row:nth-child(even){flex-direction:column;}
     .service-photo{flex-basis:180px;}
@@ -344,6 +358,20 @@
         <p>From your first call to your final session — and everything in between — we are consistently, reliably here for you.</p>
       </div>
     </div>
+
+    <div class="story-divider"></div>
+
+    <h2>Insurance &amp; Payment</h2>
+    <p>We want cost to be one less barrier between you and care. We accept self-pay along with the following insurance plans — contact our office if you don't see yours listed.</p>
+    <div class="insurance-list">
+      <span class="insurance-pill">Self-Pay</span>
+      <span class="insurance-pill">Medicare</span>
+      <span class="insurance-pill">Medicaid</span>
+      <span class="insurance-pill">Cigna</span>
+      <span class="insurance-pill">Aetna</span>
+      <span class="insurance-pill">United Healthcare</span>
+      <span class="insurance-pill">CareFirst</span>
+    </div>
   </div>
 </section>
 
@@ -353,6 +381,7 @@
       <div class="footer-brand">
         <img src="apex-logo.png" alt="Apex Behavioral Health logo" style="width:200px; height:auto; margin-bottom:14px;">
         <p>A space to be heard, respected, and supported — on your terms, at your pace.</p>
+        <p style="font-size:0.85rem;">Self-pay &amp; most major insurance accepted — <a href="about.html#insurance" style="text-decoration:underline;">see plans</a></p>
       </div>
 
       <div class="footer-col">
